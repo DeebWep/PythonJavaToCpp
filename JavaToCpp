@@ -1,0 +1,52 @@
+a = input()
+Java = False
+Cpp = False
+idk = False
+go = False
+
+
+if a=="java":
+    print('c')
+    go = True
+if a=='c':
+    print("java")
+    go = True
+if a.count('_')==0 and a.islower():
+    print("Error!")
+    go = True
+if go == False:   
+    if a[0].islower():
+        for i in a:
+            if i.isupper():
+                Java = True
+                break
+            if i == '_':
+                cpp = True
+                break
+if go == False:
+    if Java == True:
+        #Javaya aid cevirici hisse
+        java = "java"
+        answer = ""
+        for j in a:
+            if j.isupper():
+                answer= answer+'_'+j.lower()
+            else:
+                answer= answer+ j
+        k = answer.split('_')
+        if java in k:
+            answer = ""
+            k[k.index(java)]='c'
+            uzunluq = len(k)
+            for j in range(uzunluq):
+                if j!=uzunluq-1:
+                    answer = answer+k[j]+'_'
+                else:
+                    answer = answer+k[j]
+        print(answer)
+    if Cpp == True:
+        #Cpp aid cevirici hisse
+        answer = ""
+        cpp = "c"
+        
+        print(1)
